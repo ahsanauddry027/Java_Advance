@@ -20,6 +20,13 @@ Autoboxing
     wrapper object, such as `Integer` or `Character`. The reverse conversion is called
     *unboxing*. (Chapter 5)
 
+BigDecimal
+:   Java's class for exact decimal numbers, stored as an integer value plus a scale. Create
+    values from strings, and compare them with `compareTo`. (Chapter 2)
+
+BigInteger
+:   Java's class for integers of any size. Every operation returns a new object. (Chapter 2)
+
 Breadth-first search (BFS)
 :   A way to explore a graph or grid level by level, using a queue, so that nodes are
     visited in order of their distance from the start. In unweighted graphs, it finds
@@ -34,6 +41,11 @@ Circular buffer
     Also called a *ring buffer*. It lets a queue add and remove in O(1) without shifting
     elements. (Chapter 10)
 
+Comparator
+:   A functional interface whose method `compare(a, b)` returns a negative number, zero or a
+    positive number to say whether `a` comes before, together with, or after `b`. (Chapters
+    2 and 3)
+
 Deep copy
 :   A copy that duplicates an object *and* everything it refers to, so that changing the
     copy never affects the original. For a 2D array, every row must be copied. Compare
@@ -43,8 +55,17 @@ Deque
 :   A *double-ended queue*: a collection that allows insertion, removal and inspection at
     both ends. Pronounced "deck". (Chapter 10)
 
+Fast reader
+:   An input reader that reads raw bytes in large blocks and converts digits itself,
+    avoiding the overhead of `Scanner`. (Chapter 2)
+
 FIFO (first in, first out)
 :   The rule of a queue: the element that has waited longest is removed first. (Chapter 10)
+
+Functional interface
+:   An interface with exactly one abstract method, such as `Comparator` or `Runnable`.
+    Lambdas and method references create objects of functional interfaces. (Chapters 2 and
+    22)
 
 Immutable
 :   Describes an object whose state can never change after it is created, such as a `String`
@@ -76,12 +97,26 @@ JVM (Java Virtual Machine)
 :   The program that loads `.class` files, verifies their bytecode and executes it.
     (Chapters 1 and 5)
 
+Lambda expression
+:   A short way to write an implementation of a functional interface's single method:
+    parameters, an arrow, and a body, as in `(a, b) -> Integer.compare(a, b)`. (Chapters 2
+    and 22)
+
 LIFO (last in, first out)
 :   The rule of a stack: the element added most recently is removed first. (Chapter 10)
+
+Locale
+:   A setting that describes how a language and region write numbers and dates.
+    `String.format` follows it, so pass `Locale.ROOT` when output must not depend on the
+    computer. (Chapter 2)
 
 LTS (long-term support)
 :   A Java release that vendors support for several years. Java 8, 11, 17, 21 and 25 are LTS
     releases. (Chapter 1)
+
+Method reference
+:   A shorthand for a lambda that only calls one existing method, such as
+    `Integer::compare`, `String::length` or `ArrayList::new`. (Chapter 2)
 
 Monotonic queue
 :   A deque whose elements are kept in sorted order from front to back. New elements remove
@@ -121,6 +156,10 @@ Reference type
 Shallow copy
 :   A copy of an object that shares the objects it refers to with the original. `clone()` on
     a 2D array is shallow: the rows are shared. (Chapter 1)
+
+Stable sort
+:   A sort that keeps elements that compare as equal in their original relative order.
+    Java's object sorts are guaranteed to be stable. (Chapters 2 and 12)
 
 Stack
 :   A collection where elements are added and removed at the same end, the top, in last-in,

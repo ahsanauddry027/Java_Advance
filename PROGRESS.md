@@ -4,7 +4,7 @@ Status values: `todo` · `in progress` · `done`. A chapter is `done` only when 
 definition of done in CLAUDE.md (topics covered at their tier, code compiles and
 self-checks pass, check script clean, PDF builds, pages rendered and inspected, committed).
 
-**Next up:** Chapter 2 (I/O, Standard-Library Tools and Lambda Essentials), then Chapters 3–9, 11 onward in order.
+**Next up:** Chapter 3 (Object-Oriented Java at an Advanced Level), then Chapters 4–9, 11 onward in order.
 
 ## Phase 0: setup
 
@@ -23,7 +23,7 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 | Ch | Title | Budget (pp) | Status | Pages | Inspected |
 |----|-------|-------------|--------|-------|-----------|
 | 1 | Modern Java Essentials for DSA | 25–35 | done | 26 | all 26 pages, 2026-10-15 |
-| 2 | I/O, Standard-Library Tools and Lambda Essentials | 30–40 | todo | | |
+| 2 | I/O, Standard-Library Tools and Lambda Essentials | 30–40 | done | 27 (within −20%) | all pages, 2026-10-15 |
 | 3 | Object-Oriented Java at an Advanced Level | 30–40 | todo | | |
 | 4 | Exceptions, Debugging, Testing and Code Quality | 20–30 | todo | | |
 | 5 | JVM, Memory and Performance | 25–35 | todo | | |
@@ -71,15 +71,15 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
 - [x] Arrays: 1D, 2D, jagged; copying
 
 ### Ch 2: I/O, Standard-Library Tools and Lambda Essentials
-- [ ] `Scanner` vs `BufferedReader`; `StringTokenizer`; custom fast reader
-- [ ] `StringBuilder` / `PrintWriter` output; formatting
-- [ ] Parsing; multiple test cases; reading until EOF
-- [ ] Large input; common online-judge I/O errors
-- [ ] Choosing numeric types; `BigInteger` / `BigDecimal`
-- [ ] `Arrays` and `Collections` utilities
-- [ ] Lambda and method-reference essentials for DSA
-- [ ] Sorting with built-in APIs; custom and safe comparators
-- [ ] Reusable OA templates, every line explained
+- [x] `Scanner` vs `BufferedReader`; `StringTokenizer`; custom fast reader
+- [x] `StringBuilder` / `PrintWriter` output; formatting
+- [x] Parsing; multiple test cases; reading until EOF
+- [x] Large input; common online-judge I/O errors
+- [x] Choosing numeric types; `BigInteger` / `BigDecimal`
+- [x] `Arrays` and `Collections` utilities
+- [x] Lambda and method-reference essentials for DSA
+- [x] Sorting with built-in APIs; custom and safe comparators
+- [x] Reusable OA templates, every line explained
 
 ### Ch 3: Object-Oriented Java at an Advanced Level
 - [ ] Inheritance vs interfaces vs abstract classes vs composition
@@ -331,3 +331,7 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
   Template fix: inline code inside table cells may wrap. Verified HackerRank's Java
   versions from its official page; LeetCode and Codeforces could not be checked
   automatically (HTTP 403), so the book does not state their versions.
+- 2026-10-15: Chapter 2 done: 13 example programs (with .in input files) and 13 solution
+  programs, all passing; readers verified against random input with buffer sizes 1–8.
+  Measured I/O speeds (IoBenchmark) are printed by the build, so they change per build.
+  Found and documented a locale trap: String.format under bn-BD prints Bengali digits.

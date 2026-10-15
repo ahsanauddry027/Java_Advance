@@ -69,6 +69,36 @@ change in other versions; the specification and API documentation are the guaran
 - `java.util.Objects`:
   <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Objects.html>
   (checked 2026-10-15)
+- `java.util.Scanner` (describes its regular-expression parsing):
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html>
+  (checked 2026-10-15)
+- `java.io.BufferedReader`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html>
+  (checked 2026-10-15)
+- `java.util.StringTokenizer` (documented as a legacy class):
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/StringTokenizer.html>
+  (checked 2026-10-15)
+- `java.io.PrintWriter`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/PrintWriter.html>
+  (checked 2026-10-15)
+- `java.util.Locale`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.html>
+  (checked 2026-10-15)
+- `java.math.BigInteger`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigInteger.html>
+  (checked 2026-10-15)
+- `java.math.BigDecimal`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html>
+  (checked 2026-10-15)
+- `java.util.Collections` (stability of `sort`):
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collections.html>
+  (checked 2026-10-15)
+- `java.util.Comparator`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html>
+  (checked 2026-10-15)
+- Package `java.util.function` (functional interfaces):
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html>
+  (checked 2026-10-15)
 - *The javap Command* (JDK 21):
   <https://docs.oracle.com/en/java/javase/21/docs/specs/man/javap.html> (checked 2026-10-15)
 
