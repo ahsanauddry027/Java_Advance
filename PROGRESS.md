@@ -4,7 +4,7 @@ Status values: `todo` · `in progress` · `done`. A chapter is `done` only when 
 definition of done in CLAUDE.md (topics covered at their tier, code compiles and
 self-checks pass, check script clean, PDF builds, pages rendered and inspected, committed).
 
-**Next up:** Chapter 3 (Object-Oriented Java at an Advanced Level). Nine draft example programs are in `code-examples/ch03/` but have NOT been compiled, checked or committed yet; review them first (NestedClasses.java has a long line and a wrong "reversed" example to fix). Then write the solutions, the chapter text, and continue with Chapters 4–9, 11 onward.
+**Next up:** Chapter 3 (Object-Oriented Java at an Advanced Level). Nine example programs are in `code-examples/ch03/`; they compile with --release 21 -Werror and run, but have no `Ch03Check.java` yet and no chapter text. Next: self-checks, the 12 exercise solutions in `solutions/ch03/`, the chapter text, then Chapters 4–9, 11 onward.
 
 ## Phase 0: setup
 
@@ -337,3 +337,6 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
   Found and documented a locale trap: String.format under bn-BD prints Bengali digits.
 - 2026-10-15: Fixed page counting (a chapter now ends at the next part page or the back
   matter, not at the end of the book).
+- 2026-10-15: Chapter 3 draft programs fixed and compiling; planning files (CLAUDE.md,
+  SYLLABUS.md, prompts) added to the repository; interactive README written; the PDF is
+  now tracked in git; repository published to GitHub.
