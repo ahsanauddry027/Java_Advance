@@ -225,8 +225,12 @@
   context [#metadata((number: n, page: here().page())) <chapter-start>]
 }
 
+// Marks where a chapter's pages end (part pages and back matter), for page counts.
+#let boundary() = context [#metadata(here().page()) <boundary>]
+
 #let part-page(number: 1, title: "", blurb: none, chapters: ()) = {
   pagebreak(weak: true)
+  boundary()
   [#metadata((number: number, title: title)) <part-entry>]
   {
     // Invisible heading so the part appears in the PDF bookmarks.

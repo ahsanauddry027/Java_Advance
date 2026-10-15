@@ -22,8 +22,8 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 
 | Ch | Title | Budget (pp) | Status | Pages | Inspected |
 |----|-------|-------------|--------|-------|-----------|
-| 1 | Modern Java Essentials for DSA | 25–35 | done | 26 | all 26 pages, 2026-10-15 |
-| 2 | I/O, Standard-Library Tools and Lambda Essentials | 30–40 | done | 27 (within −20%) | all pages, 2026-10-15 |
+| 1 | Modern Java Essentials for DSA | 25–35 | done | 25 | all pages, 2026-10-15 |
+| 2 | I/O, Standard-Library Tools and Lambda Essentials | 30–40 | done | 26 (within −20%) | all pages, 2026-10-15 |
 | 3 | Object-Oriented Java at an Advanced Level | 30–40 | todo | | |
 | 4 | Exceptions, Debugging, Testing and Code Quality | 20–30 | todo | | |
 | 5 | JVM, Memory and Performance | 25–35 | todo | | |
@@ -31,7 +31,7 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 | 7 | The Java Collections Framework | 45–60 | todo | | |
 | 8 | Arrays and Strings | 40–55 | todo | | |
 | 9 | Linked Lists | 25–35 | todo | | |
-| 10 | Stacks, Queues and Deques | 25–35 | done | 41 (within +20%) | all pages, 2026-10-15 |
+| 10 | Stacks, Queues and Deques | 25–35 | done | 37 (within +20%) | all pages, 2026-10-15 |
 | 11 | Hashing in Problem Solving | 20–30 | todo | | |
 | 12 | Searching and Sorting | 35–50 | todo | | |
 | 13 | Recursion and Backtracking | 35–45 | todo | | |
@@ -335,3 +335,5 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
   programs, all passing; readers verified against random input with buffer sizes 1–8.
   Measured I/O speeds (IoBenchmark) are printed by the build, so they change per build.
   Found and documented a locale trap: String.format under bn-BD prints Bengali digits.
+- 2026-10-15: Fixed page counting (a chapter now ends at the next part page or the back
+  matter, not at the end of the book).

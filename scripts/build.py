@@ -191,6 +191,8 @@ def generate_main(manifest: dict, typ_files: dict, version: str, date: str) -> P
             f"blurb: {tstr(part.get('blurb', ''))}, chapters: ({chap_list},))")
         for ch in chapters:
             lines.append(f'#include "{typ_files[ch["file"]]}"')
+    lines.append("#pagebreak(weak: true)")
+    lines.append("#boundary()")
     lines.append("#set heading(numbering: none)")
     lines.append("#set par(justify: false)")
     for entry in manifest.get("back", []):
@@ -246,9 +248,10 @@ def typst_step(tools, manifest: dict, version: str, date: str) -> dict:
 
     starts = query("<chapter-start>")
     end_page = query("<book-end>")[0]
+    stops = sorted([s["page"] for s in starts] + query("<boundary>") + [end_page + 1])
     pages = {}
-    for i, s in enumerate(starts):
-        nxt = starts[i + 1]["page"] if i + 1 < len(starts) else end_page
+    for s in starts:
+        nxt = min(p for p in stops if p > s["page"])
         pages[s["number"]] = nxt - s["page"]
     final = ROOT / manifest["output"]
     shutil.copyfile(pdf, final)
