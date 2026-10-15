@@ -4,10 +4,21 @@
   "edition": "2026 Edition",
   "version": "0.1 (pilot)",
   "output": "Advanced_Java_DSA_Job_Preparation_2026.pdf",
-  "topics": ["Java 21 LTS", "Collections", "Data structures", "Algorithms", "Interviews", "Backend basics"],
+  "topics": [
+    "Java 21 LTS",
+    "Collections",
+    "Data structures",
+    "Algorithms",
+    "Interviews",
+    "Backend basics"
+  ],
   "front": [
-    {"file": "content/front/preface.md"},
-    {"file": "content/front/how-to-use.md"}
+    {
+      "file": "content/front/preface.md"
+    },
+    {
+      "file": "content/front/how-to-use.md"
+    }
   ],
   "parts": [
     {
@@ -15,10 +26,46 @@
       "title": "Java for Problem Solving",
       "blurb": "The Java you need to write correct, fast, readable solutions: types and their traps, fast input and output, lambdas for comparators, advanced object-oriented design, and a disciplined way to debug and test.",
       "chapters": [
-        {"number": 1, "title": "Modern Java Essentials for DSA", "file": "content/ch01-modern-java-essentials.md", "budget": [25, 35], "status": "todo"},
-        {"number": 2, "title": "I/O, Standard-Library Tools and Lambda Essentials", "file": "content/ch02-io-library-lambdas.md", "budget": [30, 40], "status": "todo"},
-        {"number": 3, "title": "Object-Oriented Java at an Advanced Level", "file": "content/ch03-advanced-oop.md", "budget": [30, 40], "status": "todo"},
-        {"number": 4, "title": "Exceptions, Debugging, Testing and Code Quality", "file": "content/ch04-exceptions-debugging-testing.md", "budget": [20, 30], "status": "todo"}
+        {
+          "number": 1,
+          "title": "Modern Java Essentials for DSA",
+          "file": "content/ch01-modern-java-essentials.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 2,
+          "title": "I/O, Standard-Library Tools and Lambda Essentials",
+          "file": "content/ch02-io-library-lambdas.md",
+          "budget": [
+            30,
+            40
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 3,
+          "title": "Object-Oriented Java at an Advanced Level",
+          "file": "content/ch03-advanced-oop.md",
+          "budget": [
+            30,
+            40
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 4,
+          "title": "Exceptions, Debugging, Testing and Code Quality",
+          "file": "content/ch04-exceptions-debugging-testing.md",
+          "budget": [
+            20,
+            30
+          ],
+          "status": "todo"
+        }
       ]
     },
     {
@@ -26,9 +73,36 @@
       "title": "Java Internals, Complexity and Collections",
       "blurb": "What the JVM does with your code and memory, how to measure the cost of an algorithm, and how every major collection works inside, so you can choose the right one with confidence.",
       "chapters": [
-        {"number": 5, "title": "JVM, Memory and Performance", "file": "content/ch05-jvm-memory-performance.md", "budget": [25, 35], "status": "todo"},
-        {"number": 6, "title": "Complexity Analysis", "file": "content/ch06-complexity-analysis.md", "budget": [25, 35], "status": "todo"},
-        {"number": 7, "title": "The Java Collections Framework", "file": "content/ch07-collections-framework.md", "budget": [45, 60], "status": "todo"}
+        {
+          "number": 5,
+          "title": "JVM, Memory and Performance",
+          "file": "content/ch05-jvm-memory-performance.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 6,
+          "title": "Complexity Analysis",
+          "file": "content/ch06-complexity-analysis.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 7,
+          "title": "The Java Collections Framework",
+          "file": "content/ch07-collections-framework.md",
+          "budget": [
+            45,
+            60
+          ],
+          "status": "todo"
+        }
       ]
     },
     {
@@ -36,20 +110,146 @@
       "title": "Data Structures and Algorithms",
       "blurb": "The core of the book. Each structure and algorithm is explained as an idea first, then implemented in Java, traced by hand, analyzed, and practiced in interview-style problems.",
       "chapters": [
-        {"number": 8, "title": "Arrays and Strings", "file": "content/ch08-arrays-strings.md", "budget": [40, 55], "status": "todo"},
-        {"number": 9, "title": "Linked Lists", "file": "content/ch09-linked-lists.md", "budget": [25, 35], "status": "todo"},
-        {"number": 10, "title": "Stacks, Queues and Deques", "file": "content/ch10-stacks-queues-deques.md", "budget": [25, 35], "status": "draft"},
-        {"number": 11, "title": "Hashing in Problem Solving", "file": "content/ch11-hashing.md", "budget": [20, 30], "status": "todo"},
-        {"number": 12, "title": "Searching and Sorting", "file": "content/ch12-searching-sorting.md", "budget": [35, 50], "status": "todo"},
-        {"number": 13, "title": "Recursion and Backtracking", "file": "content/ch13-recursion-backtracking.md", "budget": [35, 45], "status": "todo"},
-        {"number": 14, "title": "Trees and Binary Search Trees", "file": "content/ch14-trees-bst.md", "budget": [45, 60], "status": "todo"},
-        {"number": 15, "title": "Heaps and Priority Queues", "file": "content/ch15-heaps-priority-queues.md", "budget": [30, 40], "status": "todo"},
-        {"number": 16, "title": "Tries and Advanced Data Structures", "file": "content/ch16-tries-advanced-structures.md", "budget": [35, 50], "status": "todo"},
-        {"number": 17, "title": "Graphs", "file": "content/ch17-graphs.md", "budget": [55, 75], "status": "todo"},
-        {"number": 18, "title": "Greedy Algorithms", "file": "content/ch18-greedy.md", "budget": [20, 30], "status": "todo"},
-        {"number": 19, "title": "Bit Manipulation and Mathematical Algorithms", "file": "content/ch19-bits-math.md", "budget": [20, 30], "status": "todo"},
-        {"number": 20, "title": "Dynamic Programming", "file": "content/ch20-dynamic-programming.md", "budget": [60, 80], "status": "todo"},
-        {"number": 21, "title": "Advanced Interview Patterns", "file": "content/ch21-interview-patterns.md", "budget": [25, 35], "status": "todo"}
+        {
+          "number": 8,
+          "title": "Arrays and Strings",
+          "file": "content/ch08-arrays-strings.md",
+          "budget": [
+            40,
+            55
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 9,
+          "title": "Linked Lists",
+          "file": "content/ch09-linked-lists.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 10,
+          "title": "Stacks, Queues and Deques",
+          "file": "content/ch10-stacks-queues-deques.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "done"
+        },
+        {
+          "number": 11,
+          "title": "Hashing in Problem Solving",
+          "file": "content/ch11-hashing.md",
+          "budget": [
+            20,
+            30
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 12,
+          "title": "Searching and Sorting",
+          "file": "content/ch12-searching-sorting.md",
+          "budget": [
+            35,
+            50
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 13,
+          "title": "Recursion and Backtracking",
+          "file": "content/ch13-recursion-backtracking.md",
+          "budget": [
+            35,
+            45
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 14,
+          "title": "Trees and Binary Search Trees",
+          "file": "content/ch14-trees-bst.md",
+          "budget": [
+            45,
+            60
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 15,
+          "title": "Heaps and Priority Queues",
+          "file": "content/ch15-heaps-priority-queues.md",
+          "budget": [
+            30,
+            40
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 16,
+          "title": "Tries and Advanced Data Structures",
+          "file": "content/ch16-tries-advanced-structures.md",
+          "budget": [
+            35,
+            50
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 17,
+          "title": "Graphs",
+          "file": "content/ch17-graphs.md",
+          "budget": [
+            55,
+            75
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 18,
+          "title": "Greedy Algorithms",
+          "file": "content/ch18-greedy.md",
+          "budget": [
+            20,
+            30
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 19,
+          "title": "Bit Manipulation and Mathematical Algorithms",
+          "file": "content/ch19-bits-math.md",
+          "budget": [
+            20,
+            30
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 20,
+          "title": "Dynamic Programming",
+          "file": "content/ch20-dynamic-programming.md",
+          "budget": [
+            60,
+            80
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 21,
+          "title": "Advanced Interview Patterns",
+          "file": "content/ch21-interview-patterns.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        }
       ]
     },
     {
@@ -57,8 +257,26 @@
       "title": "Modern Java Features Worth Knowing",
       "blurb": "Lambdas and streams in depth, plus the newer language features that make everyday Java shorter and safer, and an honest view of when they help in interviews and when plain loops are better.",
       "chapters": [
-        {"number": 22, "title": "Lambdas, Functional Interfaces and Streams", "file": "content/ch22-lambdas-streams.md", "budget": [25, 35], "status": "todo"},
-        {"number": 23, "title": "Other Useful Java Features", "file": "content/ch23-other-java-features.md", "budget": [20, 30], "status": "todo"}
+        {
+          "number": 22,
+          "title": "Lambdas, Functional Interfaces and Streams",
+          "file": "content/ch22-lambdas-streams.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 23,
+          "title": "Other Useful Java Features",
+          "file": "content/ch23-other-java-features.md",
+          "budget": [
+            20,
+            30
+          ],
+          "status": "todo"
+        }
       ]
     },
     {
@@ -66,8 +284,26 @@
       "title": "Writing Reliable Solutions in Online Assessments",
       "blurb": "Templates, habits and a step-by-step workflow for turning a correct idea into an accepted submission under time pressure.",
       "chapters": [
-        {"number": 24, "title": "Online Judge Strategy", "file": "content/ch24-online-judge-strategy.md", "budget": [15, 25], "status": "todo"},
-        {"number": 25, "title": "The Problem-Solving Workflow", "file": "content/ch25-problem-solving-workflow.md", "budget": [15, 20], "status": "todo"}
+        {
+          "number": 24,
+          "title": "Online Judge Strategy",
+          "file": "content/ch24-online-judge-strategy.md",
+          "budget": [
+            15,
+            25
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 25,
+          "title": "The Problem-Solving Workflow",
+          "file": "content/ch25-problem-solving-workflow.md",
+          "budget": [
+            15,
+            20
+          ],
+          "status": "todo"
+        }
       ]
     },
     {
@@ -75,9 +311,36 @@
       "title": "Software Engineering Job Preparation in Bangladesh, 2026",
       "blurb": "Model answers for Java interview topics, a staged introduction to backend Java with Spring Boot, and a practical, evidence-based plan for the Bangladesh job market.",
       "chapters": [
-        {"number": 26, "title": "Java Interview Fundamentals", "file": "content/ch26-java-interview-fundamentals.md", "budget": [30, 40], "status": "todo"},
-        {"number": 27, "title": "Java for Backend Engineering", "file": "content/ch27-backend-java.md", "budget": [45, 60], "status": "todo"},
-        {"number": 28, "title": "Bangladesh-Focused Job Preparation", "file": "content/ch28-bangladesh-job-preparation.md", "budget": [15, 25], "status": "todo"}
+        {
+          "number": 26,
+          "title": "Java Interview Fundamentals",
+          "file": "content/ch26-java-interview-fundamentals.md",
+          "budget": [
+            30,
+            40
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 27,
+          "title": "Java for Backend Engineering",
+          "file": "content/ch27-backend-java.md",
+          "budget": [
+            45,
+            60
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 28,
+          "title": "Bangladesh-Focused Job Preparation",
+          "file": "content/ch28-bangladesh-job-preparation.md",
+          "budget": [
+            15,
+            25
+          ],
+          "status": "todo"
+        }
       ]
     },
     {
@@ -85,14 +348,45 @@
       "title": "Practice, Revision and Assessment",
       "blurb": "Curated practice problems, a large interview question bank with solutions, and a compact revision handbook for the days before an interview.",
       "chapters": [
-        {"number": 29, "title": "Topic-Wise Practice Problems", "file": "content/ch29-practice-problems.md", "budget": [25, 35], "status": "todo"},
-        {"number": 30, "title": "Interview Question Bank", "file": "content/ch30-question-bank.md", "budget": [60, 90], "status": "todo"},
-        {"number": 31, "title": "Revision Handbook", "file": "content/ch31-revision-handbook.md", "budget": [25, 35], "status": "todo"}
+        {
+          "number": 29,
+          "title": "Topic-Wise Practice Problems",
+          "file": "content/ch29-practice-problems.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 30,
+          "title": "Interview Question Bank",
+          "file": "content/ch30-question-bank.md",
+          "budget": [
+            60,
+            90
+          ],
+          "status": "todo"
+        },
+        {
+          "number": 31,
+          "title": "Revision Handbook",
+          "file": "content/ch31-revision-handbook.md",
+          "budget": [
+            25,
+            35
+          ],
+          "status": "todo"
+        }
       ]
     }
   ],
   "back": [
-    {"file": "content/back/glossary.md"},
-    {"file": "references.md"}
+    {
+      "file": "content/back/glossary.md"
+    },
+    {
+      "file": "references.md"
+    }
   ]
 }

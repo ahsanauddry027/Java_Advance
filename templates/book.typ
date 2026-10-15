@@ -52,7 +52,7 @@
 #let opt-badge() = badge("Optional", kinds.optional.color)
 
 // Index entry (collected by index-page).
-#let idx(term) = [#metadata(term) <idx>]
+#let idx(term) = [#metadata(term)<idx>]
 
 // Numbers chapters, sections and subsections ("10", "10.3", "10.3.2"); deeper
 // headings are not numbered.
@@ -89,7 +89,7 @@
 
 // ---------------------------------------------------------------- listings
 
-#let listing(kind: "Complete program", file: none, numbered: true, body) = figure(
+#let listing(kind: "Complete program", file: none, numbered: true, breakable: true, body) = figure(
   kind: "listing",
   supplement: [Listing],
   {
@@ -125,7 +125,7 @@
           sticky: true,
           head,
         )
-        block(width: 100%, inset: (x: 8pt, top: 6pt, bottom: 7pt), above: 0pt, breakable: true, {
+        block(width: 100%, inset: (x: 8pt, top: 6pt, bottom: 7pt), above: 0pt, breakable: breakable, {
           if numbered {
             show raw.line: it => {
               box(width: 1.9em, align(right, text(fill: rgb("#8c959f"), str(it.number))))
@@ -456,6 +456,8 @@
   // Code
   show raw: set text(font: mono-font)
   show raw.where(block: false): set text(size: 1.12em, fill: rgb("#24292f"))
+  // Short inline code is boxed so that justification cannot stretch its spaces.
+  show raw.where(block: false): it => if it.text.len() <= 40 { box(it) } else { it }
   show raw.where(block: true): set text(size: 8pt)
   show raw.where(block: true): set par(justify: false, leading: 0.5em)
 
@@ -463,7 +465,10 @@
   set list(indent: 0.35em, body-indent: 0.55em)
   set enum(indent: 0.35em, body-indent: 0.55em)
   set terms(separator: [: ], hanging-indent: 1.4em, spacing: 0.9em)
-  show terms.item: it => par(hanging-indent: 1.4em)[#strong(it.term): #it.description]
+  show terms.item: it => block(breakable: false, above: 0.85em, below: 0.85em, {
+    text(font: sans-font, weight: "bold", size: 9.5pt, it.term)
+    block(above: 0.35em, inset: (left: 1.2em), it.description)
+  })
 
   // Links: external URLs in the accent color
   show link: it => if type(it.dest) == str { text(fill: accent, it) } else { it }
@@ -527,6 +532,13 @@
     if ch == 0 { str(n) } else { str(ch) + "." + str(n) }
   })
   show figure: set block(breakable: true)
+  show figure.where(kind: "diagram"): set block(breakable: false)
+  // Keep a table's caption (placed above it) on the same page as the table.
+  show figure.where(kind: table): it => {
+    set align(center)
+    if it.caption != none { block(sticky: true, below: 0.65em, it.caption) }
+    it.body
+  }
   show figure.where(kind: "listing"): set block(above: 1.1em, below: 1.1em)
   show figure.where(kind: table): set figure.caption(position: top)
   show figure.caption: it => text(font: sans-font, size: 8.5pt, fill: muted)[

@@ -1,0 +1,75 @@
+# Glossary
+
+Short definitions of the technical terms used in this book, in alphabetical order. The
+chapter in parentheses is where the term is explained in full.
+
+Algorithm
+:   A precise, finite sequence of steps that solves a problem. (How to Use This Book)
+
+Amortized cost
+:   The average cost per operation over a worst-case *sequence* of operations. An
+    operation can occasionally be expensive (for example, resizing an array) and still be
+    O(1) amortized if the expensive cases are rare enough. (Chapters 6 and 10)
+
+ArrayDeque
+:   Java's resizable, circular-array implementation of the `Deque` interface; the
+    recommended class for stacks and queues. It does not allow `null` elements.
+    (Chapter 10)
+
+Autoboxing
+:   The automatic conversion of a primitive value, such as an `int` or `char`, into its
+    wrapper object, such as `Integer` or `Character`. The reverse conversion is called
+    *unboxing*. (Chapter 5)
+
+Breadth-first search (BFS)
+:   A way to explore a graph or grid level by level, using a queue, so that nodes are
+    visited in order of their distance from the start. In unweighted graphs, it finds
+    shortest paths. (Chapters 10 and 17)
+
+Circular buffer
+:   An array used as a ring: an index that moves past the last slot wraps around to slot
+    0. Also called a *ring buffer*. It lets a queue add and remove in O(1) without shifting
+    elements. (Chapter 10)
+
+Deque
+:   A *double-ended queue*: a collection that allows insertion, removal and inspection at
+    both ends. Pronounced "deck". (Chapter 10)
+
+FIFO (first in, first out)
+:   The rule of a queue: the element that has waited longest is removed first.
+    (Chapter 10)
+
+Infix notation
+:   The usual way of writing expressions, with each operator between its operands, as in
+    `3 + 4`. (Chapter 10)
+
+Invariant
+:   A condition that an algorithm keeps true at a fixed point, for example at the start of
+    every loop iteration. Stating the invariant is often the clearest way to explain why
+    an algorithm is correct. (How to Use This Book)
+
+LIFO (last in, first out)
+:   The rule of a stack: the element added most recently is removed first. (Chapter 10)
+
+Monotonic queue
+:   A deque whose elements are kept in sorted order from front to back. New elements
+    remove the elements they dominate from the back; expired elements leave from the
+    front. Used for sliding-window maximum and minimum. (Chapter 10)
+
+Monotonic stack
+:   A stack whose elements are kept in sorted order from bottom to top. Before a push, the
+    elements that would break the order are popped. Used for "next greater" and "previous
+    smaller" problems in O(n). (Chapter 10)
+
+Postfix notation
+:   A way of writing expressions with each operator after its operands, as in `3 4 +`.
+    Also called *Reverse Polish notation* (RPN). It needs no parentheses or precedence
+    rules. (Chapter 10)
+
+Queue
+:   A collection where elements are added at the back and removed from the front, in
+    first-in, first-out order. (Chapter 10)
+
+Stack
+:   A collection where elements are added and removed at the same end, the top, in
+    last-in, first-out order. (Chapter 10)

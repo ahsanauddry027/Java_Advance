@@ -29,8 +29,8 @@ FORBIDDEN = [
 ]
 
 REQUIRED_IN_CHAPTER = [
-    (r"^:::\s*\{?\s*\.objectives", "objectives box (::: objectives)"),
-    (r"^:::\s*\{?\s*\.quiz", "warm-up quiz box (::: quiz)"),
+    (r"^:::+\s*(\{\s*)?\.?objectives(\W|$)", "objectives box (::: objectives)"),
+    (r"^:::+\s*(\{\s*)?\.?quiz(\W|$)", "warm-up quiz box (::: quiz)"),
     (r"^##\s+Summary\b", "'## Summary' section"),
     (r"^##\s+Exercises\b", "'## Exercises' section"),
     (r"^##\s+Solutions\b", "'## Solutions' section"),
@@ -234,6 +234,8 @@ def run_checks() -> tuple[Report, dict]:
 
 
 def main() -> int:
+    for stream in (sys.stdout, sys.stderr):
+        stream.reconfigure(encoding="utf-8", errors="replace")
     rep, stats = run_checks()
     for level, where, msg in rep.items:
         print(f"{level:5} {where}: {msg}")

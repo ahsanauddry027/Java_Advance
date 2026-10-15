@@ -191,6 +191,7 @@ def generate_main(manifest: dict, typ_files: dict, version: str, date: str) -> P
         for ch in chapters:
             lines.append(f'#include "{typ_files[ch["file"]]}"')
     lines.append("#set heading(numbering: none)")
+    lines.append("#set par(justify: false)")
     for entry in manifest.get("back", []):
         if entry["file"] in typ_files:
             lines.append(f'#include "{typ_files[entry["file"]]}"')
@@ -329,6 +330,8 @@ def write_report(manifest, versions, java, rep, stats, pdf, date) -> None:
 # --------------------------------------------------------------------------- main
 
 def main() -> int:
+    for stream in (sys.stdout, sys.stderr):
+        stream.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     ap.add_argument("--skip-java", action="store_true", help="reuse previous Java outputs")
     ap.add_argument("--png", metavar="PAGES", help="also render these pages, e.g. 1-8,20")

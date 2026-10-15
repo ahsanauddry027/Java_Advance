@@ -168,8 +168,34 @@ end
 
 -- ---------------------------------------------------------------- elements
 
+-- Level-4 headings are run-in labels such as "Syntax breakdown"; keep them out of the
+-- PDF bookmarks and the contents.
+local function minor_heading(inlines)
+  local body = pandoc.write(pandoc.Pandoc({ pandoc.Plain(inlines) }), "typst"):gsub("%s+$", "")
+  return pandoc.RawBlock("typst", "#heading(level: 4, numbering: none, outlined: false)["
+                         .. body .. "]")
+end
+
+-- A paragraph that is only bold text ("**Syntax breakdown.**") becomes a minor heading,
+-- so it can never be left alone at the bottom of a page.
+local function Para(el)
+  local c = el.content
+  if #c == 1 and c[1].t == "Strong" then
+    local inlines = pandoc.List(c[1].content)
+    local last = inlines[#inlines]
+    if last and last.t == "Str" and last.text:sub(-1) == "." then
+      inlines[#inlines] = pandoc.Str(last.text:sub(1, -2))
+    end
+    return minor_heading(inlines)
+  end
+  return nil
+end
+
 local function Header(el)
   el.identifier = add_prefix(el.identifier)
+  if el.level == 4 then
+    return minor_heading(el.content)
+  end
   if el.classes:includes("optional") then
     el.content:insert(pandoc.Space())
     el.content:insert(pandoc.RawInline("typst", "#opt-badge();"))
@@ -237,11 +263,15 @@ local function Div(el)
   return nil
 end
 
+local SHORT_LISTING = 14  -- listings up to this many lines never split across pages
+
 local function listing_block(kind, file, numbered, lang, lines, id)
   local cb = pandoc.CodeBlock(table.concat(lines, "\n"), pandoc.Attr("", lang and { lang } or {}))
   local open = "#listing(kind: " .. tstr(kind)
   if file then open = open .. ", file: " .. tstr(file) end
-  open = open .. ", numbered: " .. (numbered and "true" or "false") .. ")["
+  open = open .. ", numbered: " .. (numbered and "true" or "false")
+  if #lines <= SHORT_LISTING then open = open .. ", breakable: false" end
+  open = open .. ")["
   return wrap(open, { cb }, with_label("]", id))
 end
 
@@ -310,5 +340,5 @@ end
 
 return {
   { Pandoc = read_meta },
-  { Header = Header, Link = Link, Span = Span, Div = Div, CodeBlock = CodeBlock },
+  { Header = Header, Link = Link, Span = Span, Div = Div, CodeBlock = CodeBlock, Para = Para },
 }

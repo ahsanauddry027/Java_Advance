@@ -4,7 +4,7 @@ Status values: `todo` · `in progress` · `done`. A chapter is `done` only when 
 definition of done in CLAUDE.md (topics covered at their tier, code compiles and
 self-checks pass, check script clean, PDF builds, pages rendered and inspected, committed).
 
-**Next up:** Phase 1 pilot: Chapter 10 (Stacks, queues and deques), then Chapters 1–9 in order.
+**Next up:** Chapter 1 (Modern Java Essentials for DSA), then Chapters 2–9, 11 onward in order.
 
 ## Phase 0: setup
 
@@ -31,7 +31,7 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 | 7 | The Java Collections Framework | 45–60 | todo | | |
 | 8 | Arrays and Strings | 40–55 | todo | | |
 | 9 | Linked Lists | 25–35 | todo | | |
-| 10 | Stacks, Queues and Deques | 25–35 | in progress | | |
+| 10 | Stacks, Queues and Deques | 25–35 | done | 39 (within +20%) | all 39 pages, 2026-10-15 |
 | 11 | Hashing in Problem Solving | 20–30 | todo | | |
 | 12 | Searching and Sorting | 35–50 | todo | | |
 | 13 | Recursion and Backtracking | 35–45 | todo | | |
@@ -149,14 +149,14 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
 - [ ] Java-specific choices and memory
 
 ### Ch 10: Stacks, Queues and Deques
-- [ ] Stack and queue fundamentals; implementing both
-- [ ] `Deque` and `ArrayDeque`; why not legacy `Stack`
-- [ ] Balanced parentheses
-- [ ] Stack-based expression processing
-- [ ] Monotonic stack (home): next greater / next smaller
-- [ ] Monotonic queue (home): sliding-window maximum
-- [ ] Queue-based BFS (preview)
-- [ ] Queue using stacks; stack using queues
+- [x] Stack and queue fundamentals; implementing both
+- [x] `Deque` and `ArrayDeque`; why not legacy `Stack`
+- [x] Balanced parentheses
+- [x] Stack-based expression processing
+- [x] Monotonic stack (home): next greater / next smaller
+- [x] Monotonic queue (home): sliding-window maximum
+- [x] Queue-based BFS (preview)
+- [x] Queue using stacks; stack using queues
 
 ### Ch 11: Hashing in Problem Solving
 - [ ] Recap of hash tables and collisions
@@ -320,4 +320,9 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
 
 ## Session log
 
-- 2026-10-15: Phase 0 complete (toolchain, scripts, style sample). Pilot chapter started.
+- 2026-10-15: Phase 0 complete (toolchain, scripts, style sample).
+- 2026-10-15: Chapter 10 pilot done: 14 example programs + 15 solution programs, all
+  compiled with --release 21 and passing randomized self-checks against brute force;
+  39 pages rendered and inspected; layout fixes applied to the template (index spacing,
+  sticky table captions, unbreakable short listings and diagrams, boxed inline code,
+  run-in minor headings). The user chose "keep going" instead of a review stop.
