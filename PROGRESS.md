@@ -4,7 +4,7 @@ Status values: `todo` · `in progress` · `done`. A chapter is `done` only when 
 definition of done in CLAUDE.md (topics covered at their tier, code compiles and
 self-checks pass, check script clean, PDF builds, pages rendered and inspected, committed).
 
-**Next up:** Chapter 3 (Object-Oriented Java at an Advanced Level), then Chapters 4–9, 11 onward in order.
+**Next up:** Chapter 3 (Object-Oriented Java at an Advanced Level). Nine draft example programs are in `code-examples/ch03/` but have NOT been compiled, checked or committed yet; review them first (NestedClasses.java has a long line and a wrong "reversed" example to fix). Then write the solutions, the chapter text, and continue with Chapters 4–9, 11 onward.
 
 ## Phase 0: setup
 
