@@ -556,6 +556,12 @@
     inset: (x: 5pt, y: 4pt),
   )
   show table: set text(size: 9pt)
+  // Table cells are narrow and not justified: inline code there must be able to wrap,
+  // so it is shown as plain monospaced text instead of a (non-breaking) box.
+  show table: it => {
+    show raw.where(block: false): r => text(font: mono-font, size: 0.94em, fill: rgb("#24292f"), r.text)
+    it
+  }
   show table: set align(left)
   show table: set par(justify: false, leading: 0.5em)
   show table.cell.where(y: 0): set text(font: sans-font, weight: "bold", size: 8.4pt)

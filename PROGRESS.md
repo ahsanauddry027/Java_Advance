@@ -4,7 +4,7 @@ Status values: `todo` · `in progress` · `done`. A chapter is `done` only when 
 definition of done in CLAUDE.md (topics covered at their tier, code compiles and
 self-checks pass, check script clean, PDF builds, pages rendered and inspected, committed).
 
-**Next up:** Chapter 1 (Modern Java Essentials for DSA), then Chapters 2–9, 11 onward in order.
+**Next up:** Chapter 2 (I/O, Standard-Library Tools and Lambda Essentials), then Chapters 3–9, 11 onward in order.
 
 ## Phase 0: setup
 
@@ -22,7 +22,7 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 
 | Ch | Title | Budget (pp) | Status | Pages | Inspected |
 |----|-------|-------------|--------|-------|-----------|
-| 1 | Modern Java Essentials for DSA | 25–35 | todo | | |
+| 1 | Modern Java Essentials for DSA | 25–35 | done | 26 | all 26 pages, 2026-10-15 |
 | 2 | I/O, Standard-Library Tools and Lambda Essentials | 30–40 | todo | | |
 | 3 | Object-Oriented Java at an Advanced Level | 30–40 | todo | | |
 | 4 | Exceptions, Debugging, Testing and Code Quality | 20–30 | todo | | |
@@ -31,7 +31,7 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 | 7 | The Java Collections Framework | 45–60 | todo | | |
 | 8 | Arrays and Strings | 40–55 | todo | | |
 | 9 | Linked Lists | 25–35 | todo | | |
-| 10 | Stacks, Queues and Deques | 25–35 | done | 39 (within +20%) | all 39 pages, 2026-10-15 |
+| 10 | Stacks, Queues and Deques | 25–35 | done | 41 (within +20%) | all pages, 2026-10-15 |
 | 11 | Hashing in Problem Solving | 20–30 | todo | | |
 | 12 | Searching and Sorting | 35–50 | todo | | |
 | 13 | Recursion and Backtracking | 35–45 | todo | | |
@@ -59,16 +59,16 @@ self-checks pass, check script clean, PDF builds, pages rendered and inspected, 
 Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes).
 
 ### Ch 1: Modern Java Essentials for DSA
-- [ ] Diagnostic quiz with answers
-- [ ] Source → bytecode → JVM; JDK/JRE/JVM; compile-and-run
-- [ ] Java versions and LTS releases; what online judges run
-- [ ] Primitive vs reference types
-- [ ] Conversion, casting, overflow, integer division, floating-point precision
-- [ ] `==` vs `.equals()`
-- [ ] `String`, `StringBuilder`, `StringBuffer`; immutability; string pool
-- [ ] `final`, `static`, `this`, `super` for problem solving
-- [ ] `null`, `NullPointerException`, safe reference handling
-- [ ] Arrays: 1D, 2D, jagged; copying
+- [x] Diagnostic quiz with answers
+- [x] Source → bytecode → JVM; JDK/JRE/JVM; compile-and-run
+- [x] Java versions and LTS releases; what online judges run
+- [x] Primitive vs reference types
+- [x] Conversion, casting, overflow, integer division, floating-point precision
+- [x] `==` vs `.equals()`
+- [x] `String`, `StringBuilder`, `StringBuffer`; immutability; string pool
+- [x] `final`, `static`, `this`, `super` for problem solving
+- [x] `null`, `NullPointerException`, safe reference handling
+- [x] Arrays: 1D, 2D, jagged; copying
 
 ### Ch 2: I/O, Standard-Library Tools and Lambda Essentials
 - [ ] `Scanner` vs `BufferedReader`; `StringTokenizer`; custom fast reader
@@ -326,3 +326,8 @@ Tick a topic when it is written at its tier (see SYLLABUS.md for tiers and homes
   39 pages rendered and inspected; layout fixes applied to the template (index spacing,
   sticky table captions, unbreakable short listings and diagrams, boxed inline code,
   run-in minor headings). The user chose "keep going" instead of a review stop.
+- 2026-10-15: Chapter 1 done: 10 example programs (one Java 25 file compiled with
+  --release 25) and 12 solution programs, all passing self-checks; 26 pages inspected.
+  Template fix: inline code inside table cells may wrap. Verified HackerRank's Java
+  versions from its official page; LeetCode and Codeforces could not be checked
+  automatically (HTTP 403), so the book does not state their versions.

@@ -42,7 +42,8 @@ from bookutil import (  # noqa: E402
     write_text,
 )
 
-MAIN_RE = re.compile(r"public\s+static\s+void\s+main\s*\(")
+# A classic main method, or a Java 25 instance main method in a compact source file.
+MAIN_RE = re.compile(r"public\s+static\s+void\s+main\s*\(|^\s*void\s+main\s*\(", re.MULTILINE)
 DIRECTIVE_RE = re.compile(r"//\s*build:\s*(.+)$", re.MULTILINE)
 
 

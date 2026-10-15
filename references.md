@@ -22,7 +22,55 @@ change in other versions; the specification and API documentation are the guaran
 - Oracle. *Oracle Java SE Support Roadmap* (LTS releases and support dates).
   <https://www.oracle.com/java/technologies/java-se-support-roadmap.html> (checked 2026-10-15)
 
+## Java Enhancement Proposals (JEPs)
+
+- JEP 254: Compact Strings (Java 9). <https://openjdk.org/jeps/254> (checked 2026-10-15)
+- JEP 280: Indify String Concatenation (Java 9). <https://openjdk.org/jeps/280>
+  (checked 2026-10-15)
+- JEP 330: Launch Single-File Source-Code Programs (Java 11).
+  <https://openjdk.org/jeps/330> (checked 2026-10-15)
+- JEP 358: Helpful NullPointerExceptions (Java 14). <https://openjdk.org/jeps/358>
+  (checked 2026-10-15)
+- JEP 400: UTF-8 by Default (Java 18). <https://openjdk.org/jeps/400> (checked 2026-10-15)
+- JEP 431: Sequenced Collections (Java 21). <https://openjdk.org/jeps/431>
+  (checked 2026-10-15)
+- JEP 512: Compact Source Files and Instance Main Methods (Java 25).
+  <https://openjdk.org/jeps/512> (checked 2026-10-15)
+
+## Java language specification chapters used
+
+- JLS 21, Chapter 3 (Lexical Structure: string literals and interning).
+  <https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html> (checked 2026-10-15)
+- JLS 21, Chapter 5 (Conversions and Contexts: widening, narrowing, boxing).
+  <https://docs.oracle.com/javase/specs/jls/se21/html/jls-5.html> (checked 2026-10-15)
+- JLS 21, Chapter 15 (Expressions: integer division, remainder, evaluation order).
+  <https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html> (checked 2026-10-15)
+
 ## Java API documentation (Java SE 21)
+
+- `java.lang.String`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html>
+  (checked 2026-10-15)
+- `java.lang.StringBuilder`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/StringBuilder.html>
+  (checked 2026-10-15)
+- `java.lang.StringBuffer`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/StringBuffer.html>
+  (checked 2026-10-15)
+- `java.lang.Integer` (including the `valueOf` caching guarantee):
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html>
+  (checked 2026-10-15)
+- `java.lang.Math` (`addExact`, `floorMod`, `round`):
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Math.html>
+  (checked 2026-10-15)
+- `java.util.Arrays`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Arrays.html>
+  (checked 2026-10-15)
+- `java.util.Objects`:
+  <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Objects.html>
+  (checked 2026-10-15)
+- *The javap Command* (JDK 21):
+  <https://docs.oracle.com/en/java/javase/21/docs/specs/man/javap.html> (checked 2026-10-15)
 
 - `java.util.Deque`:
   <https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Deque.html>
@@ -69,6 +117,12 @@ change in other versions; the specification and API documentation are the guaran
 ## Java practice and style
 
 - Bloch, J. *Effective Java*, 3rd edition. Addison-Wesley, 2018.
+
+## Online judges
+
+- HackerRank. *Execution Environment* (languages, versions, time and memory limits).
+  <https://hackerrank-knowledge-base.help.usepylon.com/articles/6693750503>
+  (checked 2026-10-15; the page said "Last updated 2 months ago")
 
 ## Tools used to build this book
 
